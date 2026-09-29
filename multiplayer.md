@@ -2,13 +2,17 @@
 
 Packet:
 
-3B  \\xC2\\xB5\\xE3 (header)
+Byte count  Content
 
-16B username (max 16 chars, padded with \\x00)
+3B          \\xC2\\xB5\\xE3 (header)
 
-idk user\_uuid (all \\xAB if not registered)
+16B         username (max 16 chars, padded with \\x00 at end)
 
-3B  ship\_skin (first 3 bytes of hash)
+idk         user\_uuid (all \\xAB if player not logged in)
 
-1B  shipX (1 byte)
+3B          ship\_skin (first 3 bytes of hash)
+
+1B          shipX (1 byte)
+
+23+idkB     total
 
